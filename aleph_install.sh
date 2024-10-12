@@ -84,5 +84,7 @@ main() {
     echo "Setup completed successfully!"
 }
 
+echo "now change supervisor.env file and Caddyfile with proper domains and net interface"
+
 # Run the main function
 main

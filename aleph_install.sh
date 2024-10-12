@@ -84,7 +84,7 @@ main() {
     echo "Setup completed successfully!"
 }
 
-echo "now change supervisor.env file and Caddyfile with proper domains and net interface"
+echo "now use nano and manually change supervisor.env file and Caddyfile with proper domains and network interface"
 
 # Run the main function
 main

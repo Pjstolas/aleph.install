@@ -82,9 +82,9 @@ main() {
     install_caddy
     configure_caddy_aleph
     echo "Setup completed successfully!"
+    echo "now use nano and manually change 'supervisor.env' file and 'Caddyfile' with proper domains and network interface"
 }
 
-echo "now use nano and manually change supervisor.env file and Caddyfile with proper domains and network interface"
 
 # Run the main function
 main

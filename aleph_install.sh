@@ -53,7 +53,7 @@ configure_caddy_aleph() {
         burst 5
     }
 }
-vm.example.org:443 {
+**.*:443 {
     reverse_proxy http://127.0.0.1:4020 {
         # Forward Host header to the backend
         header_up Host {host}
@@ -65,7 +65,7 @@ EOL
 ALEPH_VM_PRINT_SYSTEM_LOGS=True
 #ALEPH_VM_USE_JAILER=True
 ALEPH_VM_DOMAIN_NAME=
-ALEPH_VM_NETWORK_INTERFACE=
+ALEPH_VM_NETWORK_INTERFACE=ens18
 ALEPH_VM_DNS_RESOLUTION=resolvectl
 ALEPH_VM_IPV6_FORWARDING_ENABLED=False
 #ALEPH_VM_IPV6_ADDRESS_POOL="/64"

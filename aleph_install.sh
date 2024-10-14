@@ -28,7 +28,7 @@ install_docker_vmconnector() {
 # Function to install aleph-vm
 install_aleph_vm() {
     echo "Installing aleph-vm..."
-    wget -P /opt https://github.com/aleph-im/aleph-vm/releases/download/1.1.0/aleph-vm.ubuntu-22.04.deb
+    wget -P /opt https://github.com/aleph-im/aleph-vm/releases/download/1.2.0/aleph-vm.ubuntu-22.04.deb
     apt install -y /opt/aleph-vm.ubuntu-22.04.deb
 }
 
@@ -53,7 +53,7 @@ configure_caddy_aleph() {
         burst 5
     }
 }
-**.*:443 {
+<**.**>:443 {
     reverse_proxy http://127.0.0.1:4020 {
         # Forward Host header to the backend
         header_up Host {host}
@@ -82,7 +82,7 @@ main() {
     install_caddy
     configure_caddy_aleph
     echo "Setup completed successfully!"
-    echo "now using nano manually change 'supervisor.env' file and 'Caddyfile' with proper domains and network interface"
+    echo "Last procedure is to use nano to manually change '/etc/aleph-vm/supervisor.env' file and '/etc/caddy/Caddyfile' with proper domains and network interface"
 }
 
 

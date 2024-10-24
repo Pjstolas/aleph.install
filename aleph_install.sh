@@ -18,6 +18,11 @@ update_upgrade() {
     apt upgrade -y
 }
 
+# Function to disable os logs 
+rsyslog_disable() {
+    systemctl disable rsyslog.service
+}
+
 # Function to install Docker and run vm-connector
 install_docker_vmconnector() {
     echo "Installing Docker and running vm-connector..."
@@ -77,6 +82,7 @@ EOL
 main() {
     check_sudo
     update_upgrade
+    rsyslog_disable
     install_docker_vmconnector
     install_aleph_vm
     install_caddy

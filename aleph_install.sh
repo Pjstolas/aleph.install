@@ -78,6 +78,12 @@ ALEPH_VM_PAYMENT_RECEIVER_ADDRESS=""
 EOL
 }
 
+# Function to install sshd
+install_openssh() {
+    echo "Installing oepnssh..."
+    sudo apt install openssh-server
+}
+
 # Main execution
 main() {
     check_sudo
@@ -87,8 +93,9 @@ main() {
     install_aleph_vm
     install_caddy
     configure_caddy_aleph
+    install_openssh
     echo "Setup completed successfully!"
-    echo "Last procedure is to use nano to manually change '/etc/aleph-vm/supervisor.env' file and '/etc/caddy/Caddyfile' with proper domains and network interface"
+    echo "To finish installation use NANO to manually change '/etc/aleph-vm/supervisor.env' file and '/etc/caddy/Caddyfile' with your domain and the network interface (ip a)"
 }
 
 

@@ -81,7 +81,7 @@ EOL
 # Function to install sshd
 install_openssh() {
     echo "Installing oepnssh..."
-    sudo apt install openssh-server
+    sudo apt install openssh-server -y
 }
 
 # Main execution

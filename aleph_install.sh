@@ -93,7 +93,7 @@ main() {
     install_aleph_vm
     install_caddy
     configure_caddy_aleph
-    install_openssh
+#    install_openssh
     echo "Setup completed successfully!"
     echo "To finish installation use NANO to manually change '/etc/aleph-vm/supervisor.env' file and '/etc/caddy/Caddyfile' with your domain and the network interface (ip a)"
 }

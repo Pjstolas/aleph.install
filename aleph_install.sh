@@ -53,12 +53,14 @@ configure_caddy_aleph() {
     cat >/etc/caddy/Caddyfile <<EOL
 {
     https_port 443
-    on_demand_tls {
-        interval 60s
-        burst 5
-    }
 }
-<**.**>:443 {
+
+
+<--------->:443 {
+    tls {
+       on_demand
+    }
+    
     reverse_proxy http://127.0.0.1:4020 {
         # Forward Host header to the backend
         header_up Host {host}

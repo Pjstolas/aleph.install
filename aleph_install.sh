@@ -33,7 +33,7 @@ install_docker_vmconnector() {
 # Function to install aleph-vm
 install_aleph_vm() {
     echo "Installing aleph-vm..."
-    wget -P /opt https://github.com/aleph-im/aleph-vm/releases/download/1.3.0/aleph-vm.ubuntu-22.04.deb
+    wget -P /opt https://github.com/aleph-im/aleph-vm/releases/download/1.3.1/aleph-vm.ubuntu-22.04.deb
     apt install -y /opt/aleph-vm.ubuntu-22.04.deb
 }
 
